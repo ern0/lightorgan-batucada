@@ -1,12 +1,23 @@
 
+	# define T1 150
+	# define P1 75
+
+	# define T2 140
+	# define P2 100
+
+	# define T3 75
+	# define P3 50
+
+
 
 	void loop() {
 
 		//calibrate();
-		//goto lead1;
+		goto echo2;
+
 
 intro:
-		d(150,75);
+		d(T1,P1);
 
 		m(r1,0,0,0,0,0,0,0); pattern1a();
 		m(g1,0,0,0,0,0,0,0); pattern1a();
@@ -26,13 +37,15 @@ intro:
 			m(r1|r2,g1,g2,0,0,0,0,0); pattern1a();
 			m(g1|g2,b1,b2,0,0,0,0,0); pattern1a();
 			m(b1|b2,w1,w2,0,0,0,0,0); pattern1a();
-			m(w1|w2,r2,r1,0,0,0,0,0); pattern1b();
+			m(0,r2,r1,0,0,w1|w2,0,0); pattern1b();
 			m(0,0,0,0,0,0,0,0); upbeat1();
-			mute(w1|w2);
 		}
 
+		delay(1200);
+
+
 lead1:
-		d(130,100);
+		d(T2,P2);
 
 		m(0,0,0,w2,0,0,0,0); pattern1a();
 		m(0,0,0,w2,0,0,0,0); pattern1a();
@@ -46,8 +59,9 @@ lead1:
 		m(0,0,0,r1|g1|b1|r2|g2|b2,w1|w2,0,0,0); pattern1a();
 		m(0,0,0,r1|g1|b1|r2|g2|b2,w1|w2,0,0,0); pattern1b();
 
+
 lead2:
-		d(130,100);
+		d(T2,P2);
 
 		mute(w1);
 		m(0,0,0,w2,0,0,0,0); upbeat1();
@@ -62,6 +76,27 @@ lead2:
 		m(0,0,0,r1|g1|b1|r2|g2|b2,w1|w2,0,0,0); pattern1a();
 		m(0,0,0,r1|g1|b1|r2|g2|b2,w1|w2,0,0,0); pattern1a();
 		m(0,0,0,r1|g1|b1|r2|g2|b2,w1|w2,0,0,0); pattern1b();
+
+
+echo1:
+		d(T3,P3);
+
+		m(w2,0,0,0,0,0,0,0); pattern2();
+		m(w2,0,0,0,0,0,0,0); pattern2();
+		m(w2,0,0,0,0,0,0,0); pattern2();
+		m(0,w2,0,0,0,0,0,0); pattern2();
+
+		m(r1|g1|b1|r2|g2|b2,0,0,0,0,0,0,0); pattern2();
+		m(r1|g1|b1|r2|g2|b2,0,0,0,0,0,0,0); pattern2();
+		m(r1|g1|b1|r2|g2|b2,0,0,0,0,0,0,0); pattern2();
+		m(0,r1|g1|b1|r2|g2|b2,0,0,0,0,0,0); pattern2();
+
+echo2:
+		d(T3*2,P3*2);
+
+		m(0,0,w2,w1,0,0,0,0); pattern2();
+		m(0,0,r1|g1|b1|r2|g2|b2,r1|g1|b1|r2|g2|b2,0,0,0,0); pattern2();
+
 
 
 z:
