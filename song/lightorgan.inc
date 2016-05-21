@@ -101,13 +101,37 @@ unsigned char v1,v2,v3,v4,v5,v6,v7,v8;
 	# define m(m1,m2,m3,m4,m5,m6,m7,m8) v1=m1;v2=m2;v3=m3;v4=m4;v5=m5;v6=m6;v7=m7;v8=m8;
 
 
+	void setValue(unsigned char bits,unsigned char v) {
+
+		if (bits & r1) relayState[0] = v;
+		if (bits & g1) relayState[1] = v;
+		if (bits & b1) relayState[2] = v;
+		if (bits & w1) relayState[3] = v;
+		if (bits & r2) relayState[4] = v;
+		if (bits & g2) relayState[5] = v;
+		if (bits & b2) relayState[6] = v;
+		if (bits & w2) relayState[7] = v;
+		for (int n = 0; n < 8; n++) digitalWrite(xlat[n],relayState[n]);
+
+	} // setValue()
+
+
+	void mute(unsigned char bits) {
+		setValue(bits,OFF);
+	} // mute()
+
+
+	void lit(unsigned char bits) {
+		setValue(bits,ON);
+	} // lit
+
+
 	void setup() {
 
 		for (int n = 0; n < 8; n++) {
 			pinMode(xlat[n],OUTPUT);
-			relayState[n] = OFF;
-			digitalWrite(xlat[n],relayState[n]);
 		}
+		mute(r1|g1|b1|w1|r2|g2|b2|w2);
 
 		m(r1,g1,b1,w1,r2,g2,b2,w2);
 		d(150,100);

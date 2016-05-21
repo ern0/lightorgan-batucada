@@ -1,4 +1,4 @@
-
+clear
 date
 ./mkino.sh
 xdotool search --name Arduino windowactivate
