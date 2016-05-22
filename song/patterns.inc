@@ -3,7 +3,7 @@
 	# define P1 75
 
 	# define T2 140
-	# define P2 100
+	# define P2 90
 
 	# define T3 75
 	# define P3 50
@@ -14,11 +14,15 @@
 	# define T5 140
 	# define P5 120
 
+	# define T6 125
+	# define P6 70
+
 
 	void loop() {
+		int t,p;
 
 		//calibrate();
-		goto gogogogo;
+		//goto s;
 
 
 intro:
@@ -29,14 +33,14 @@ intro:
 		m(b1,0,0,0,0,0,0,0); pattern1a();
 		m(w1,0,0,0,0,0,0,0); pattern1b();
 		m(0,0,0,0,0,0,0,0); upbeat1();
-		mute(w1);
+		mut(w1);
 
 		m(r1|r2,0,0,0,0,0,0,0); pattern1a();
 		m(g1|g2,0,0,0,0,0,0,0); pattern1a();
 		m(b1|b2,0,0,0,0,0,0,0); pattern1a();
 		m(w1|w2,0,0,0,0,0,0,0); pattern1b();
 		m(0,0,0,0,0,0,0,0); upbeat1();
-		mute(w1|w2);
+		mut(w1|w2);
 
 		for (int n = 0; n < 2; n++) {
 			m(r1|r2,g1,g2,0,0,0,0,0); pattern1a();
@@ -68,14 +72,14 @@ lead1:
 lead2:
 		d(T2,P2);
 
-		mute(w1);
+		mut(w1);
 		m(0,0,0,w2,0,0,0,0); upbeat1();
 		m(0,0,0,w2,0,0,0,0); pattern1a();
 		m(0,0,0,w2,0,0,0,0); pattern1a();
 		m(0,0,0,w2,0,0,0,0); pattern1a();
 		m(0,0,0,w2,0,0,0,0); pattern1b();
 
-		mute(w1);
+		mut(w1);
 		m(0,0,0,r1|g1|b1|r2|g2|b2,w1|w2,0,0,0); upbeat1();
 		m(0,0,0,r1|g1|b1|r2|g2|b2,w1|w2,0,0,0); pattern1a();
 		m(0,0,0,r1|g1|b1|r2|g2|b2,w1|w2,0,0,0); pattern1a();
@@ -109,7 +113,6 @@ echo2:
 		m(r1|g1|b1|r2|g2|b2,0,0,0,0,0,0,0); pattern2();
 		m(0,r1|g1|b1|r2|g2|b2,0,0,0,0,0,0); pattern2();
 
-
 answer1:
 		d(T4,P4);
 
@@ -123,10 +126,9 @@ answer1:
 		m(0,0,0,w2,0,0,0,0); ans1();
 		m(0,0,r1|g1|b1|r2|g2|b2,0,0,0,w1,0); ans1();
 
-
+		delay(500);
 
 gogogogo:
-
 		d(30,15);
 
 		for (int n = 0; n < 2; n++) {
@@ -136,17 +138,110 @@ gogogogo:
 			delay(300);
 		}
 
-		d(T5>>1,P5>>1);
+		delay(500);
 
-		m(w1,w2,0,0, 0,0,0,0); batacuda();
-		m(w1,w2,0,0, 0,0,0,0); batacuda();
-		m(w1,w2,0,0, 0,0,0,0); batacuda();
-		m(w1,w2,0,0, 0,0,0,0); batacuda();
+		t = T5;
+		p = P5;
+		d(t >> 1,p >> 1);
+
+		m(w1,0,0,0, 0,0,0,0); batacuda();
+		m(w1,0,0,0, 0,0,0,0); batacuda();
+		m(w1,0,0,0, 0,0,0,0); batacuda();
+		m(0,w1,0,0, 0,0,0,0); batacuda();
+
+		m(w1|w2,0,0,0, 0,0,0,0); batacuda();
+		m(w1|w2,0,0,0, 0,0,0,0); batacuda();
+		m(w1|w2,0,0,0, 0,0,0,0); batacuda();
+		m(0,w1|w2,0,0, 0,0,0,0); batacuda();
+
+		t -= 1;
+		p -= 1;
+		d(t >> 1,p >> 1);
+
+		m(w1|w2,0,r1,r2, 0,0,0,0); batacuda();
+		m(w1|w2,0,r1,r2, 0,0,0,0); batacuda();
+		m(w1|w2,0,r1,r2, 0,0,0,0); batacuda();
+		m(0,w1|w2,r1,r2, 0,0,0,0); batacuda();
+
+		m(w1|w2,0,0,0, g1|g2,0,0,0); batacuda();
+		m(w1|w2,0,0,0, b1|b2,0,0,0); batacuda();
+		m(w1|w2,0,0,0, g1|g2,0,0,0); batacuda();
+		m(0,w1|w2,0,0, b1|b2,0,0,0); batacuda();
+
+		t -= 1;
+		p -= 1;
+		d(t >> 1,p >> 1);
+
+		m(r1|r2,0,0,0, 0,0,0,0); batacuda();
+		m(g1|g2,0,0,0, 0,0,0,0); batacuda();
+		m(b1|b2,0,0,0, 0,0,0,0); batacuda();
+		m(0,w1|w2,0,0, 0,r1|r2|g1|g2|b1|b2,0,0); batacuda();
+
+		t -= 1;
+		p -= 1;
+		d(t >> 1,p >> 1);
+
+		m(w1|w2,0,0,0, r1,0,0,r2); batacuda();
+		m(w1|w2,0,0,0, r1,0,0,r2); batacuda();
+		m(w1|w2,0,0,0, r1,0,0,r2); batacuda();
+		m(w1|w2,0,0,0, r1,w1|w2,0,r2); batacuda();
+
+		t -= 1;
+		p -= 1;
+		d(t >> 1,p >> 1);
+
+		m(w1|w2,0,0,0, g1|b1,0,0,g2|b2); batacuda();
+		m(w1|w2,0,0,0, g1|b1,0,0,g2|b2); batacuda();
+		m(w1|w2,0,0,0, g1|b1,0,0,g2|b2); batacuda();
+		m(0,w1|w2,0,0, g1|b1,r1|r2,0,g2|b2); batacuda();
+
+		t -= 1;
+		p -= 1;
+		d(t >> 1,p >> 1);
+
+		lit(g1|g2);
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
+		m(0,w1|w2,b1|b2,0, 0,r1|r2|g1|g2|b1|b2,r1|r2|g1|g2,0); batacuda();
+		mut(r1|r2);
+
+		lit(g1|g2);
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
+		m(0,w1|w2,b1|b2,0, 0,r1|r2|g1|g2|b1|b2,r1|r2|g1|g2,0); batacuda();
+		mut(r1|r2);
 
 
+		d(T6,P6);
+
+		m(w1|w2,0,0,0, 0,0,0,0); intermission();
+		m(r1|g2|b1|w2,r2|g1|b2|w1,0,0, 0,0,0,0); intermission();
+
+		d(T6 >> 1,P6 >> 1);
+
+		mut(w1|w2);
+		lit(g1|g2);
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
+		m(0,w1|w2,b1|b2,0, 0,r1|r2|g1|g2|b1|b2,r1|r2|g1|g2,0); batacuda();
+		mut(r1|r2);
+
+		d(T6 >> 1,P6 >> 1);
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
+		d(T6,P6);
+		mut(r1|r2|g1|g2|b1|b2|w1|w2);
+		m(0,0,r1|g2|b1|w2,r2|g1|b2|w1, 0,0,0,0); intermission();
 
 z:
-		delay(4000);
-		mute(r1|g1|b1|w1|r2|g2|b2|w2);
+		delay(12000);
+		for (int n = 0; n < 8; n++) {
+			digitalWrite(xlat[n],OFF);
+			delay(140);
+		}
 		while (true) delay(1000);
 	}

@@ -116,9 +116,9 @@ unsigned char v1,v2,v3,v4,v5,v6,v7,v8;
 	} // setValue()
 
 
-	void mute(unsigned char bits) {
+	void mut(unsigned char bits) {
 		setValue(bits,OFF);
-	} // mute()
+	} // mut()
 
 
 	void lit(unsigned char bits) {
@@ -131,7 +131,7 @@ unsigned char v1,v2,v3,v4,v5,v6,v7,v8;
 		for (int n = 0; n < 8; n++) {
 			pinMode(xlat[n],OUTPUT);
 		}
-		mute(r1|g1|b1|w1|r2|g2|b2|w2);
+		mut(r1|g1|b1|w1|r2|g2|b2|w2);
 
 		m(r1,g1,b1,w1,r2,g2,b2,w2);
 		d(150,100);
