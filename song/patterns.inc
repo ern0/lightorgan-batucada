@@ -12,13 +12,13 @@
 	# define P4 100
 
 	# define T5 140
-	# define P5 100
+	# define P5 120
 
 
 	void loop() {
 
 		//calibrate();
-		goto gogogo;
+		goto gogogogo;
 
 
 intro:
@@ -82,6 +82,8 @@ lead2:
 		m(0,0,0,r1|g1|b1|r2|g2|b2,w1|w2,0,0,0); pattern1a();
 		m(0,0,0,r1|g1|b1|r2|g2|b2,w1|w2,0,0,0); pattern1b();
 
+		delay(600);
+
 echo1:
 		d(T3,P3);
 		m(0,0,0,0,w2,0,0,0); pattern2();
@@ -122,12 +124,26 @@ answer1:
 		m(0,0,r1|g1|b1|r2|g2|b2,0,0,0,w1,0); ans1();
 
 
-gogogo:
-		d(T5,P5):
-		m(w1,w2,0,0,0,0,0,0); pre();
-		m(w1,w2,0,0,0,0,0,0); pre();
-		m(0,0,w1,w2,0,0,0,0); pre();
-		m(w1,w2,0,0,0,0,0,0); pre();
+
+gogogogo:
+
+		d(30,15);
+
+		for (int n = 0; n < 2; n++) {
+			m(r1,g1,b1,w1,r2,g2,b2,w2); pre();
+			delay(300);
+			m(w2,b2,g2,r2,w1,b1,g1,r1); pre();
+			delay(300);
+		}
+
+		d(T5>>1,P5>>1);
+
+		m(w1,w2,0,0, 0,0,0,0); batacuda();
+		m(w1,w2,0,0, 0,0,0,0); batacuda();
+		m(w1,w2,0,0, 0,0,0,0); batacuda();
+		m(w1,w2,0,0, 0,0,0,0); batacuda();
+
+
 
 z:
 		delay(4000);
