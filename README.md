@@ -60,3 +60,8 @@ Probably, it's not the best method for songwriting,
 I almost ran out of 8 columns, but it was
 easy to implement and required no separate
 editor or even a real player.
+I have no further plans with it.
+
+### Take it ###
+
+Download it, tweak it, enjoy.
