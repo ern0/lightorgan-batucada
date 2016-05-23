@@ -64,4 +64,4 @@ I have no further plans with it.
 
 ### Take it ###
 
-Download it, tweak it, enjoy.
+Fork it, tweak it, enjoy.
