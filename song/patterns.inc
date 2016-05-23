@@ -21,8 +21,8 @@
 	void loop() {
 		int t,p;
 
-		//calibrate();
-		//goto s;
+		calibrate();
+		goto s;
 
 
 intro:
@@ -216,6 +216,7 @@ gogogogo:
 
 		d(T6,P6);
 
+		mut(b1|b2|g1|g2);
 		m(w1|w2,0,0,0, 0,0,0,0); intermission();
 		m(r1|g2|b1|w2,r2|g1|b2|w1,0,0, 0,0,0,0); intermission();
 
