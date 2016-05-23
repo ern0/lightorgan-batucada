@@ -34,9 +34,10 @@ device is turned on.
 So, the player use no interrupts,
 only `digitalWrite()` and `delay()`
 instructions.
-It eats up some clock cycle, especially with the wrappers,
+It eats up some extra clock cycle, especially with the wrappers,
 but please, no one will hear this delay,
-it's a 16 MHz processor.
+it's a 16 MHz processor,
+at least twice as fast as an Amiga 500.
 
 The `m()` (m for macro) macro sets the values of `v1`..`v8`,
 then several `v()` (v for value) function call plays a
