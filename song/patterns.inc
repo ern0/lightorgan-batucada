@@ -21,8 +21,8 @@
 	void loop() {
 		int t,p;
 
-		calibrate();
-		goto s;
+		//calibrate();
+		//goto s;
 
 
 intro:

@@ -269,7 +269,7 @@ v( __ | __ | __ | __ | __ | __ | __ | __ , __ | __ | __ | __ | __ | __ | __ | __
 	void loop() {
 		int t,p;
 
-		//calibrate();
+		calibrate();
 		goto s;
 
 
@@ -446,11 +446,6 @@ gogogogo:
 		t -= 1;
 		p -= 1;
 		d(t >> 1,p >> 1);
-
-s:
-t = T5;
-p = P5;
-d(t >> 1,p >> 1);
 
 		lit(g1|g2);
 		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
