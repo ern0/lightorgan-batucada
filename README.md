@@ -62,6 +62,6 @@ easy to implement and required no separate
 editor or even a real player.
 I have no further plans with it.
 
-### Take it ###
+## License ##
 
 Fork it, tweak it, enjoy.
