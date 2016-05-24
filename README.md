@@ -1,6 +1,6 @@
 # lightorgan-batacuda
 Arduino controlled 8-relay light organ plays a batacuda.
-Prepared for ''ToneAThon'',
+Prepared for ''ToneAThon'' 2016,
 internal music competition at Ericsson.
 (I will link the video as it will be available.)
 
@@ -37,7 +37,7 @@ instructions.
 It eats up some extra clock cycle, especially with the wrappers,
 but please, no one will hear this delay,
 it's a 16 MHz processor,
-at least twice as fast as an Amiga 500.
+at least 16x as fast as a Commodore 16.
 
 The `m()` (m for macro) macro sets the values of `v1`..`v8`,
 then several `v()` (v for value) function call plays a
