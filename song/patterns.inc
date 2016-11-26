@@ -24,7 +24,6 @@
 		//calibrate();
 		//goto s;
 
-
 intro:
 		d(T1,P1);
 
@@ -181,6 +180,7 @@ gogogogo:
 		p -= 1;
 		d(t >> 1,p >> 1);
 
+		mut(r1|r2|b1|b2|g1|g2);
 		m(w1|w2,0,0,0, r1,0,0,r2); batacuda();
 		m(w1|w2,0,0,0, r1,0,0,r2); batacuda();
 		m(w1|w2,0,0,0, r1,0,0,r2); batacuda();
