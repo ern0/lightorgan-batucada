@@ -1,11 +1,12 @@
 # if ( defined(__unix__) || defined(__APPLE__) )
-# include "../posixino/posixino.cpp"
+# include "posixino/posixino.cpp"
 
 # define ON (HIGH)
 # define OFF (LOW)
 char xlat[] = { 0,1,2,3,4,5,6,7 };
 
 # else
+#include <Arduino.h>
 
 # define ON (LOW)
 # define OFF (HIGH)
