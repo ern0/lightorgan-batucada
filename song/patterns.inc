@@ -143,74 +143,74 @@ gogogogo:
 		p = P5;
 		d(t >> 1,p >> 1);
 
-		m(w1,0,0,0, 0,0,0,0); batacuda();
-		m(w1,0,0,0, 0,0,0,0); batacuda();
-		m(w1,0,0,0, 0,0,0,0); batacuda();
-		m(0,w1,0,0, 0,0,0,0); batacuda();
+		m(w1,0,0,0, 0,0,0,0); batucada();
+		m(w1,0,0,0, 0,0,0,0); batucada();
+		m(w1,0,0,0, 0,0,0,0); batucada();
+		m(0,w1,0,0, 0,0,0,0); batucada();
 
-		m(w1|w2,0,0,0, 0,0,0,0); batacuda();
-		m(w1|w2,0,0,0, 0,0,0,0); batacuda();
-		m(w1|w2,0,0,0, 0,0,0,0); batacuda();
-		m(0,w1|w2,0,0, 0,0,0,0); batacuda();
-
-		t -= 1;
-		p -= 1;
-		d(t >> 1,p >> 1);
-
-		m(w1|w2,0,r1,r2, 0,0,0,0); batacuda();
-		m(w1|w2,0,r1,r2, 0,0,0,0); batacuda();
-		m(w1|w2,0,r1,r2, 0,0,0,0); batacuda();
-		m(0,w1|w2,r1,r2, 0,0,0,0); batacuda();
-
-		m(w1|w2,0,0,0, g1|g2,0,0,0); batacuda();
-		m(w1|w2,0,0,0, b1|b2,0,0,0); batacuda();
-		m(w1|w2,0,0,0, g1|g2,0,0,0); batacuda();
-		m(0,w1|w2,0,0, b1|b2,0,0,0); batacuda();
+		m(w1|w2,0,0,0, 0,0,0,0); batucada();
+		m(w1|w2,0,0,0, 0,0,0,0); batucada();
+		m(w1|w2,0,0,0, 0,0,0,0); batucada();
+		m(0,w1|w2,0,0, 0,0,0,0); batucada();
 
 		t -= 1;
 		p -= 1;
 		d(t >> 1,p >> 1);
 
-		m(r1|r2,0,0,0, 0,0,0,0); batacuda();
-		m(g1|g2,0,0,0, 0,0,0,0); batacuda();
-		m(b1|b2,0,0,0, 0,0,0,0); batacuda();
-		m(0,w1|w2,0,0, 0,r1|r2|g1|g2|b1|b2,0,0); batacuda();
+		m(w1|w2,0,r1,r2, 0,0,0,0); batucada();
+		m(w1|w2,0,r1,r2, 0,0,0,0); batucada();
+		m(w1|w2,0,r1,r2, 0,0,0,0); batucada();
+		m(0,w1|w2,r1,r2, 0,0,0,0); batucada();
+
+		m(w1|w2,0,0,0, g1|g2,0,0,0); batucada();
+		m(w1|w2,0,0,0, b1|b2,0,0,0); batucada();
+		m(w1|w2,0,0,0, g1|g2,0,0,0); batucada();
+		m(0,w1|w2,0,0, b1|b2,0,0,0); batucada();
+
+		t -= 1;
+		p -= 1;
+		d(t >> 1,p >> 1);
+
+		m(r1|r2,0,0,0, 0,0,0,0); batucada();
+		m(g1|g2,0,0,0, 0,0,0,0); batucada();
+		m(b1|b2,0,0,0, 0,0,0,0); batucada();
+		m(0,w1|w2,0,0, 0,r1|r2|g1|g2|b1|b2,0,0); batucada();
 
 		t -= 1;
 		p -= 1;
 		d(t >> 1,p >> 1);
 
 		mut(r1|r2|b1|b2|g1|g2);
-		m(w1|w2,0,0,0, r1,0,0,r2); batacuda();
-		m(w1|w2,0,0,0, r1,0,0,r2); batacuda();
-		m(w1|w2,0,0,0, r1,0,0,r2); batacuda();
-		m(w1|w2,0,0,0, r1,w1|w2,0,r2); batacuda();
+		m(w1|w2,0,0,0, r1,0,0,r2); batucada();
+		m(w1|w2,0,0,0, r1,0,0,r2); batucada();
+		m(w1|w2,0,0,0, r1,0,0,r2); batucada();
+		m(w1|w2,0,0,0, r1,w1|w2,0,r2); batucada();
 
 		t -= 1;
 		p -= 1;
 		d(t >> 1,p >> 1);
 
-		m(w1|w2,0,0,0, g1|b1,0,0,g2|b2); batacuda();
-		m(w1|w2,0,0,0, g1|b1,0,0,g2|b2); batacuda();
-		m(w1|w2,0,0,0, g1|b1,0,0,g2|b2); batacuda();
-		m(0,w1|w2,0,0, g1|b1,r1|r2,0,g2|b2); batacuda();
+		m(w1|w2,0,0,0, g1|b1,0,0,g2|b2); batucada();
+		m(w1|w2,0,0,0, g1|b1,0,0,g2|b2); batucada();
+		m(w1|w2,0,0,0, g1|b1,0,0,g2|b2); batucada();
+		m(0,w1|w2,0,0, g1|b1,r1|r2,0,g2|b2); batucada();
 
 		t -= 1;
 		p -= 1;
 		d(t >> 1,p >> 1);
 
 		lit(g1|g2);
-		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
-		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
-		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
-		m(0,w1|w2,b1|b2,0, 0,r1|r2|g1|g2|b1|b2,r1|r2|g1|g2,0); batacuda();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batucada();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batucada();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batucada();
+		m(0,w1|w2,b1|b2,0, 0,r1|r2|g1|g2|b1|b2,r1|r2|g1|g2,0); batucada();
 		mut(r1|r2);
 
 		lit(g1|g2);
-		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
-		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
-		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
-		m(0,w1|w2,b1|b2,0, 0,r1|r2|g1|g2|b1|b2,r1|r2|g1|g2,0); batacuda();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batucada();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batucada();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batucada();
+		m(0,w1|w2,b1|b2,0, 0,r1|r2|g1|g2|b1|b2,r1|r2|g1|g2,0); batucada();
 		mut(r1|r2);
 
 
@@ -224,16 +224,16 @@ gogogogo:
 
 		mut(w1|w2);
 		lit(g1|g2);
-		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
-		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
-		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
-		m(0,w1|w2,b1|b2,0, 0,r1|r2|g1|g2|b1|b2,r1|r2|g1|g2,0); batacuda();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batucada();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batucada();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batucada();
+		m(0,w1|w2,b1|b2,0, 0,r1|r2|g1|g2|b1|b2,r1|r2|g1|g2,0); batucada();
 		mut(r1|r2);
 
 		d(T6 >> 1,P6 >> 1);
-		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
-		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
-		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batacuda();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batucada();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batucada();
+		m(w1|w2,0,b1|b2,0, 0,0,r1|r2|g1|g2,0); batucada();
 		d(T6,P6);
 		mut(r1|r2|g1|g2|b1|b2|w1|w2);
 		m(0,0,r1|g2|b1|w2,r2|g1|b2|w1, 0,0,0,0); intermission();

@@ -1,11 +1,11 @@
-cat song/batacuda.html \
+cat song/batucada.html \
 	| tr \>\< "\n\n" \
-	| grep batacuda \
+	| grep batucada \
 	| tr -cd '\11\12\15\40-\176' \
-	> song/batacuda.inc
+	> song/batucada.inc
 
 cat \
 	song/lightorgan.inc \
-	song/batacuda.inc \
+	song/batucada.inc \
 	song/patterns.inc \
-	> lightorgan-batacuda.ino
+	> lightorgan-batucada.ino

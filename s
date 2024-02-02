@@ -1,2 +1,2 @@
 clear
-./lightorgan-batacuda
+./lightorgan-batucada
